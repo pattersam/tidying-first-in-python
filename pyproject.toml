@@ -1,0 +1,17 @@
+[project]
+name = "tidying-first-in-python"
+version = "0.1.0"
+description = "Python implementations of the \"tidyings\" from Kent Beck's _Tidy First?_"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["click>=8.1.7", "hypothesis>=6.122.1"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tidy_first"]
+
+[project.scripts]
+run_tidyings = "tidy_first.cli:cli"
